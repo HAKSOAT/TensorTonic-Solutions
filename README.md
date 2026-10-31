@@ -22,6 +22,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Problem | Description | Link |
 |---|---|---|
 | Decode Attention with a KV Cache | Append one key and value position to a KV cache and compute grouped-query attention for the next token. | https://www.tensortonic.com/problems/cs336-l10-kv-cache-decode-step |
+| Patchify a Batch of Images | Split PyTorch image batches into a row-major grid of non-overlapping flattened Vision Transformer patches. | https://www.tensortonic.com/problems/cs336-l17-vision-transformer-patchify |
 | Implement Gradient Descent for a 1D Quadratic | Optimize a one-dimensional quadratic with iterative gradient descent and return the parameter trajectory. | https://www.tensortonic.com/problems/gradient-descent-quadratic |
 | Implement Positional Encoding (sin/cos) | Generate sinusoidal Transformer positional encodings across sequence positions and embedding dimensions, with the formula and tests in the browser. | https://www.tensortonic.com/problems/positional-encoding |
 | Implement Sigmoid in NumPy | Implement a vectorized sigmoid activation in NumPy for scalars, lists, vectors, and matrices, including large positive and negative inputs. | https://www.tensortonic.com/problems/sigmoid-numpy |
