@@ -7,8 +7,8 @@ def causal_gqa(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor) -> torch.Tenso
     q # (b, qh, s, dim)
     k # (b, kh, s, dim)
     g = q.shape[1] // k.shape[1]
-    query = q.unflatten(dim=1, sizes=(-1, g)) # (b, qh, g, s, dim)
-    att = query @ k.unsqueeze(2).transpose(-2, -1) # (b, qh, g, s, s)
+    query = q.unflatten(dim=1, sizes=(-1, g)) # (b, kh, g, s, dim)
+    att = query @ k.unsqueeze(2).transpose(-2, -1) # (b, kh, g, s, s)
     seq_len = att.shape[-1]
     mask = torch.tril(torch.ones(seq_len, seq_len))
     mask = torch.where(mask.bool(), 0, float("-inf")).to(q.dtype)
